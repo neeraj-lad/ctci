@@ -94,7 +94,7 @@ class BST
     }
 }
 
-class Test46
+class InorderSuccessor
 {
     public static void main(String args[])throws IOException
     {

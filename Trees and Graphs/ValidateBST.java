@@ -52,7 +52,7 @@ class BST
     }
 }
 
-class Test45
+class ValidateBST
 {
     public static void main(String args[])throws IOException
     {

@@ -56,7 +56,7 @@ class BT
     }
 }
 
-class Test41
+class CheckBalanced
 {
     public static void main(String args[])throws IOException
     {

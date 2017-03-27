@@ -1,4 +1,6 @@
 /*
+ * Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+
 i/p
 s subset [ascii vals]
 0 < len(s) < 10^6
@@ -7,7 +9,7 @@ o/p
 true/false
 
 **********************
-1. Brute force: O(n^2) -
+1. Brute force: O(n^2) O(1)
 2. HashMap: O(n) O(n)
 3. Set: O(n) O(n)
 */
@@ -15,7 +17,7 @@ true/false
 import java.io.*;
 import java.util.*;
 
-class Test11
+class IsUnique
 {
 
 public static void main(String args[]) throws IOException 
@@ -40,7 +42,7 @@ static boolean mtd2(String s)
 {
     Map<Character, Integer> hm = new HashMap<Character, Integer>();
     for (int i = 0; i < s.length(); i++)
-        if (hm.get(s.charAt(i)) == null)
+        if (!hm.containsKey(s.charAt(i)))
             hm.put(s.charAt(i), 1);
         else
             hm.put(s.charAt(i), hm.get(s.charAt(i)) + 1);

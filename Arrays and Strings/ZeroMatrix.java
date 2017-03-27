@@ -1,15 +1,15 @@
 import java.io.*;
 
-class Test17
+class ZeroMatrix
 {
     public static void main(String args[])throws IOException
     {
        int m = 4, n = 3;
-       int a[][] = {  {1, 0, 2},
-                        {2, 3, 4},
-                        {2, 5, 0},
-                        {1, 1, 0}
-                     };    
+       int a[][] = {{1, 0, 2},
+                    {2, 3, 4},
+                    {2, 5, 0},
+                    {1, 1, 0}
+                    };    
 
        printMatrix(a);
 

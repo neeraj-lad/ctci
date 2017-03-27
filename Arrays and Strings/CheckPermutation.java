@@ -7,7 +7,7 @@ other.
  * o/p:
  * boolean res
  *
- * mtd: (time) (space)
+ * Mtd: (time) (space)
  * 1. Brute force - O(n^2) O(1)
  * 2. Sorting - O(nlogn) O(1)
  * 3. HashMap - O(n) O(n)

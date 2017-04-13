@@ -33,16 +33,15 @@ class SearchInRotatedArray {
 		if (a == null)	return -1;
 
 		int pivot = getPivot(a);
-		if (x >= a[0] && x > a[pivot])	return binarySearch(a, x, 0, pivot - 1);
-		else	return binarySearch(a, x, pivot, a.length - 1);	
+		if (a[pivot] <= x && x <= a[a.length - 1])	return binarySearch(a, x, pivot, a.length - 1);
+		else	return binarySearch(a, x, 0, pivot - 1);	
 	}
 
 	private static int getPivot(int[] a) {
 		int start = 0, end = a.length - 1;
 		while (start < end) {
 			int mid = start + (end - start) / 2;
-			if (mid == 0 || a[mid - 1] > a[mid])	return mid;
-			else if (a[start] <= a[mid])	start = mid + 1;
+			if (a[mid] > a[end])	start = mid + 1;
 			else	end = mid;
 		}		
 		return start;
